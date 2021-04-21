@@ -1,6 +1,12 @@
 import express from 'express';
+import './database';
+import { routes } from './routes';
 
 const app = express();
+
+app.use(express.json());//Habilita json
+
+app.use(routes);
 
 /* 
 * Tipos de rotas
